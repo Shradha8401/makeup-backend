@@ -1,0 +1,182 @@
+body{background-color: rgb(166, 163, 163) ;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.Container{
+    height:auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 2.5fr 2.5fr 3fr 3fr 0.2fr;
+    grid-template-areas:
+    "header header"
+    "d2 d1"
+    "about about"
+    "education education"
+    "project project"
+    "experience experience"
+    "footer footer"
+    ; 
+}
+
+#ImgIcon{
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+#ppPhoto{
+    height:150px;
+    width:150px;
+    margin-right: 20px;
+    border: 2px solid ;
+}
+
+header{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    grid-area:header;
+    
+    padding: 10px;
+    height: 35px;
+    
+}
+
+.headerClass a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 50px;
+}
+
+.headerClass a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+ 
+
+.allSecs{
+    font-family:'Montserrat';
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(101, 96, 96);
+    border:8px inset ;
+}
+
+p{
+    color: black;
+    text-align: justify;
+}
+
+footer{
+    grid-area:footer;
+    background-color:black;
+    padding: 10px;
+    height: 35px;
+    text-align: center;
+}
+
+h2{
+    font-style:oblique;
+    background-color: rgb(74, 72, 72);
+    text-align: center;
+    padding: 10px;
+}
+
+.firstDiv{
+    margin: 30px;
+}
+
+#d2{
+    grid-area:d1;
+    float: right;
+}
+
+#d1{
+    grid-area:d2;
+    float: left;
+    margin-left: 50px;
+}
+
+.footerLinks{
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#about{
+    grid-area:about;
+    font-family:'Montserrat';
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(101, 96, 96);
+    border:8px inset ;
+}
+#education{
+    grid-area:education;
+    font-family:'Montserrat';
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(101, 96, 96);
+    border:8px inset ;
+}
+#project{
+    grid-area:project;
+    font-family:'Montserrat';
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(101, 96, 96);
+    border:8px inset ;
+}
+#experience{
+    grid-area:experience;
+    font-family:'Montserrat';
+    padding: 20px;
+    margin: 30px;
+    background-color: rgb(101, 96, 96);
+    border:8px inset ;
+}
+
+  /* Mobile Layout*/
+
+@media only screen and (max-width:500px){ /* if the width is less than 500px*/
+    .Container{
+        height: 700vh;
+        background-color: rgb(166, 163, 163);
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 1fr 1.8fr 1.8fr 1.8fr 1.8fr 0.4fr;
+        grid-template-areas:
+        "header"
+        "d1"
+        "d2"
+        "about"
+        "education"
+        "experience"
+        "project"
+        "footer";
+    }
+    #d1,#d2{
+        margin: 10px;
+        text-align: center;
+    }
+
+    .headerClass a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+}
+   
